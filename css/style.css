@@ -102,6 +102,10 @@ body {
   min-height: 100vh;
 }
 
+html[lang="en"] body {
+  font-family: "Inter", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+
 img { max-width: 100%; height: auto; border: 0; }
 
 a {
@@ -126,14 +130,15 @@ code {
 .skip {
   position: absolute;
   left: 12px;
-  top: -40px;
+  top: 12px;
+  transform: translateY(-200%);
   background: var(--brand-navy);
   color: var(--white);
   padding: 8px 14px;
   border-radius: var(--radius-btn);
   z-index: 100;
 }
-.skip:focus { top: 12px; }
+.skip:focus { transform: none; }
 
 .site-header {
   position: sticky;
