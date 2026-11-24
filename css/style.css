@@ -4,7 +4,8 @@
   --cta-pink-hover: #E8558A;
   --brand-navy: #1A1A5E;
   --text-primary: #1A1A5E;
-  --text-muted: #7B7B9E;
+  --text-muted: #66668A;
+  --cta-navy-hover: #12124A;
   --bg-wash: #FFF5F8;
   --bg-pink-soft: #FFE8F0;
   --success: #22C55E;
@@ -89,7 +90,6 @@ html, body {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -115,7 +115,7 @@ a {
   overflow-wrap: anywhere;
   word-break: break-word;
 }
-a:hover { color: var(--cta-pink-hover); text-decoration-color: var(--cta-pink-hover); }
+a:hover { color: var(--brand-navy); text-decoration-color: var(--cta-pink); }
 
 code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -138,7 +138,18 @@ code {
   border-radius: var(--radius-btn);
   z-index: 100;
 }
-.skip:focus { transform: none; }
+.skip:focus,
+.skip:focus-visible { transform: none; }
+
+:focus-visible {
+  outline: 3px solid var(--brand-navy);
+  outline-offset: 3px;
+}
+
+.btn-secondary:focus-visible {
+  outline: 3px solid var(--brand-pink);
+  outline-offset: 3px;
+}
 
 .site-header {
   position: sticky;
@@ -204,7 +215,7 @@ code {
   color: var(--text-muted);
 }
 .lang-switch a:hover {
-  color: var(--cta-pink-hover);
+  color: var(--brand-navy);
   background: var(--bg-pink-soft);
 }
 
@@ -226,7 +237,7 @@ main { padding: 32px 0 72px; }
 
 .eyebrow {
   margin: 0 0 8px;
-  color: var(--brand-pink);
+  color: var(--brand-navy);
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.08em;
@@ -272,7 +283,7 @@ h1 {
 .toc summary::after {
   content: "＋";
   float: right;
-  color: var(--brand-pink);
+  color: var(--brand-navy);
   font-weight: 700;
 }
 .toc[open] summary::after { content: "－"; }
@@ -310,15 +321,17 @@ h1 {
 .btn-secondary {
   display: inline-block;
   padding: 12px 20px;
-  border: 2px solid var(--cta-pink);
+  border: 2px solid var(--brand-navy);
   border-radius: var(--radius-btn);
-  color: var(--cta-pink);
+  background: var(--brand-navy);
+  color: var(--white);
   font-weight: 700;
   text-decoration: none;
   line-height: 1.2;
 }
 .btn-secondary:hover {
-  background: var(--cta-pink);
+  background: var(--cta-navy-hover);
+  border-color: var(--brand-pink);
   color: var(--white);
   text-decoration: none;
 }

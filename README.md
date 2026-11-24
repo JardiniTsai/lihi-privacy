@@ -1,6 +1,6 @@
 # lihi 隱私權政策（公開頁）
 
-這是 lihi（利害短網址有限公司／TS Media Group）的公開隱私權政策靜態網站，以 GitHub Pages 發布。
+這是 lihi（利害短網址有限公司）的公開隱私權政策靜態網站，以 GitHub Pages 發布。正式公司名稱以台灣公司登記的「利害短網址有限公司」為準；登記資料未列外文公司名稱，因此中英文版都使用此名稱。
 
 - 繁中版：[/](https://jardinitsai.github.io/lihi-privacy/)
 - 英文版：[/en/](https://jardinitsai.github.io/lihi-privacy/en/)

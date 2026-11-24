@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
   <a class="skip" href="#content">跳到主要內容</a>
@@ -201,12 +201,14 @@
 <li>平台貼文識別碼</li>
 <li>作者公開顯示名稱</li>
 <li>作者公開帳號名稱</li>
+<li>作者 ID（若 API 有提供）</li>
 <li>公開內文（及系統產生或平台提供之標題，如有）</li>
 <li>發文時間</li>
 <li>抓取時間</li>
 <li>符合的搜尋關鍵字</li>
 <li>內部 AI 分類結果與理由（例如：潛在客戶、客訴或一般討論）</li>
 </ul>
+<p>我們會保存作者 ID（若 API 有提供）；未提供時該欄為空。這與第 14.7 節的說明一致。</p>
 <p>我們不會向 Threads 要求貼文「擁有者」等非該搜尋端點提供的欄位，也不會另外蒐集您的 Email、電話號碼或非公開的個人檔案資料。</p>
 <h3 id="s14-3">14.3 法律依據與特定目的</h3>
 <p>本公司為台灣公司，就本節資料之蒐集、處理與利用，適用中華民國《個人資料保護法》及相關法規。</p>
@@ -238,7 +240,7 @@
 <a href="https://lihi-brand-monitor.monster7405.workers.dev/threads/data-deletion">https://lihi-brand-monitor.monster7405.workers.dev/threads/data-deletion</a><br />
 我們會依 Meta 規格驗證請求並啟動刪除作業。您可至下列狀態頁，以前述回呼回傳的確認碼查詢辦理進度：<br />
 <a href="https://lihi-brand-monitor.monster7405.workers.dev/threads/deletion-status">https://lihi-brand-monitor.monster7405.workers.dev/threads/deletion-status</a><br />
-請注意：Threads 關鍵字搜尋提供的公開貼文資料不含發文者帳號 ID，因此由他人發布、經關鍵字搜尋取得的貼文，我們通常無法記錄其發文者 ID，也就無法透過此回呼自動對應並刪除。若您希望我們刪除此類貼文，請依前述第 1 種方式，寄信至 <a href="mailto:service@lihi.io">service@lihi.io</a> 並附上相關公開貼文網址，我們將以人工方式查找並處理。</li>
+請注意：Threads 關鍵字搜尋通常不提供發文者帳號 ID。若 API 有提供，我們會依第 14.2 節保存該作者 ID，並可透過此回呼自動對應並刪除；若未提供，我們通常無法記錄其發文者 ID，也就無法透過此回呼自動對應並刪除。若您希望我們刪除此類貼文，請依前述第 1 種方式，寄信至 <a href="mailto:service@lihi.io">service@lihi.io</a> 並附上相關公開貼文網址，我們將以人工方式查找並處理。</li>
 </ol>
 <p>若員工或其他已授權本應用程式的 Threads 使用者在 Meta 或 Threads 設定中移除本應用程式，我們會廢棄已保存的存取憑證並停止使用該憑證。</p>
 <p>我們將於收到有效且資料齊備的請求後 15 日內完成處理；必要時得延長 15 日，並於延長時通知申請人。若請求不完整或尚須驗證身分，處理期間自補齊資料之次日起算。</p>
